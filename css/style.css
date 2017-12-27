@@ -1,0 +1,71 @@
+.top{
+	margin: 0;
+	padding: 0;
+	height:40px;
+}
+.topleft{
+	float:left;
+	width: 300px;
+	height: 40px;
+	margin-left: 200px;
+	text-align:left;
+	line-height: 40px;
+	font-size: 12px;
+	
+}
+.topright{
+	float:right;
+	width: 300px;
+	height: 40px;
+	//background-color: green;
+	text-align:left;
+	line-height: 40px;
+	font-size: 12px;
+	margin-right: 200px;
+	
+}
+.top img{
+	margin-left: 10px;
+	line-height: 40px;
+}
+img{
+	margin: 0;
+	padding: 0;
+}
+.log{
+	margin-left: 200px;	
+	height:115px;
+}
+
+.sr{
+	float:left;
+	width:600px;
+	margin-top: 5px;	
+	margin-left: 80px;
+}
+.logoimg{
+	float:left;
+}
+.sr .shuru{
+	float:left;
+	width:395px;
+	height:40px;
+	border-color:darkorange;
+	line-height:115px;
+	
+}
+
+
+.sr .but{
+	float:left;
+	width:90px;
+	height:46px;
+	background-color: #FF8C00;
+	border: 0;
+}
+.log .wz{
+	float:none;
+	width: 500px;
+	margin-left: 80px;
+	
+}
