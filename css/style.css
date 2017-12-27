@@ -37,7 +37,7 @@ img{
 	height:115px;
 }
 
-.sr{
+.log .sr{
 	float:left;
 	width:600px;
 	margin-top: 5px;	
@@ -64,8 +64,7 @@ img{
 	border: 0;
 }
 .log .wz{
-	float:none;
 	width: 500px;
-	margin-left: 80px;
 	
 }
+
