@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 800px;
+				height: 300px;
+				margin: 20px;
+				border: solid 1px;
+			}
+			.box1{
+				width: 400px;
+				height: 300px;
+				margin: 20px;
+				float:left;
+				margin:0px;
+			}
+			.target{				
+				float:left;
+				}
+			ul{
+				list-style: none;
+				
+				}
+			.li1{
+				line-height:2em;
+					
+				}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+        	<img src="images/trash1.png" class="target"/>
+            <div class="box1">
+            	<ul>
+                <li class="li1" draggable="true">html文章html文html文html文1</li>
+                <li class="li1" draggable="true">html文章html文html文html文2</li>
+                <li class="li1" draggable="true">html文章html文html文html文3</li>                
+                </ul>
+            </div>
+        </div>
+		<div class="box">
+        删除的文章：
+        <ul class="target1">
+                           
+        </ul>
+        </div>
+        
+		<script type="text/javascript">
+			var boxs = document.querySelectorAll(".li1");
+			var target = document.querySelector(".target");
+			var  tmp = null;//临时变量
+			for(var i=0;i<boxs.length;i++){
+				boxs[i].ondragstart = function(e){
+					console.log("开始拖动");
+					tmp = this;
+					
+				}
+				
+				boxs[i].ondragend = function(e){
+					console.log("拖动结束");
+					tmp = null;
+				}
+			}
+			
+			target.ondragenter = function(e){
+				console.log("进入");
+			}
+			target.ondragleave = function(e){
+				console.log("离开")
+			}
+			target.ondragover = function(e){
+				e.preventDefault();
+//				console.log("悬停");
+			}
+			target.ondrop = function(e){
+				console.log("悬停的时候松手");
+				document.querySelector(".target").setAttribute("src","images/trash2.jpg");
+				document.querySelector(".target1").appendChild(tmp);
+			}
+		</script>
+	</body>
+</html>
+
